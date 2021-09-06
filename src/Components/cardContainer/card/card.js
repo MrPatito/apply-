@@ -1,5 +1,10 @@
 import React from 'react'
 
 function Card() {
-  return <div></div>
+  return (
+    <div>
+      <p>cososo</p>
+    </div>
+  )
 }
+export default Card

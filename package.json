@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "node-sass --include-path scss src/Components/Sass/style.scss src/Components/Css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "eslintConfig": {
     "extends": [
@@ -38,9 +40,15 @@
   "devDependencies": {
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
     "prettier": "2.3.2"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

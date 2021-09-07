@@ -6,8 +6,8 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 function Card(props) {
   const [vehicles, setVehicles] = useState()
-  const [startDate, setStartDate] = useState(new Date())
-  const [endDate, setendDate] = useState(new Date())
+  const [startDate, setStartDate] = useState()
+  const [endDate, setEndDate] = useState()
   console.log(vehicles)
 
   useEffect(() => {
@@ -49,10 +49,7 @@ function Card(props) {
       </div>
       <div>
         <h3>To</h3>
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-        />
+        <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
       </div>
     </div>
   )

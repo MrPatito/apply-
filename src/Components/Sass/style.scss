@@ -5,8 +5,7 @@ body {
   height: 100vh;
   display: flex;
 }
-// #root {
-// }
+
 .App {
   display: flex;
   flex-direction: column;
@@ -16,9 +15,51 @@ body {
   background-color: #184aa0;
   height: 100vh;
   width: 100vw;
+
+  font-family: 'Montserrat', sans-serif;
 }
 .Mapon {
   margin-top: 26px;
   width: 156px;
   height: 56px;
+}
+.Card {
+  display: grid;
+  grid-template-areas:
+    'route route route'
+    'selector selector selector'
+    'period from to'
+    'generate generate generate';
+  grid-template-columns: auto 202px 202px;
+  grid-template-rows: auto 52px 103px 64px;
+  margin: 0;
+  padding: 0;
+  background-color: #e8ebf0;
+  width: 600px;
+  height: 300px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 2px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+  .Title {
+    grid-area: route;
+    padding: 40px 0 31px 26px;
+    font-size: 24px;
+    h2 {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+  }
+  .SelectVehicle {
+    grid-area: selector;
+    display: flex;
+    flex-direction: row;
+    .Vehicles {
+      padding-right: 24px;
+      width: 380px;
+      height: 32px;
+    }
+  }
 }

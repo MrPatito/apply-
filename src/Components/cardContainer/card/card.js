@@ -1,11 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import Select from 'react-select'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 function Card(props) {
   const [vehicles, setVehicles] = useState()
   const [startDate, setStartDate] = useState(new Date())
+  const [endDate, setendDate] = useState(new Date())
   console.log(vehicles)
 
   useEffect(() => {
@@ -20,39 +22,36 @@ function Card(props) {
       })
   }, [])
 
+  const options = [
+    { value: 'Select vehicle', label: '' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ]
+
   return (
     <div className="Card">
-      <div>
+      <div className="Title">
         <h2>Route report</h2>
       </div>
-      <div>
-        <p>Vehicle number</p>
-        <select name="Select vehicle">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+      <div className="SelectVehicle">
+        <h3>Vehicle Number</h3>
+        <Select className="Vehicles" options={options} />
       </div>
       <div>
-        <h2>Period</h2>
+        <h3>Period</h3>
       </div>
       <div>
+        <h3>From</h3>
         <DatePicker
           selected={startDate}
           onChange={(date) => setStartDate(date)}
         />
       </div>
       <div>
-        <label htmlFor="start">To:</label>
-        <input
-          type="date"
-          id="start"
-          name="trip-end"
-          value="2018-07-22"
-          min="2018-01-01"
-          max="2018-12-31"
+        <h3>To</h3>
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
         />
       </div>
     </div>

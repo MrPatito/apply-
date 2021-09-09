@@ -19,7 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .Mapon {
-  margin-top: 26px;
+  margin: 26px 0 26px 0;
   width: 156px;
   height: 56px;
 }
@@ -54,10 +54,22 @@ body {
   }
   .VehicleNumber {
     grid-area: vehicle;
-    h3 {
-      font-size: 14px;
-      font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    // h3 {
+    //   padding-left: 24px;
+    //   font-size: 14px;
+    //   font-weight: 400;
+    // }
+    .Ast {
+      padding: 0;
+      color: red;
     }
+  }
+  h3 {
+    padding-left: 24px;
+    font-size: 14px;
+    font-weight: 400;
   }
   .SelectVehicle {
     grid-area: selector;
@@ -66,7 +78,7 @@ body {
     justify-content: flex-end;
     .Vehicles {
       padding: 0 24px 0 16px;
-      width: 380px;
+      width: 420px;
       height: 32px;
     }
   }

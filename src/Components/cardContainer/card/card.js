@@ -36,6 +36,7 @@ function Card(props) {
       </div>
       <div className="VehicleNumber">
         <h3>Vehicle Number</h3>
+        <h3 className="Ast">*</h3>
       </div>
       <div className="SelectVehicle">
         <Select className="Vehicles" options={options} />

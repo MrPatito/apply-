@@ -34,7 +34,9 @@ function Card(props) {
       <div className="Title">
         <h2>Route report</h2>
       </div>
-      <h3>Vehicle Number</h3>
+      <div className="VehicleNumber">
+        <h3>Vehicle Number</h3>
+      </div>
       <div className="SelectVehicle">
         <Select className="Vehicles" options={options} />
       </div>

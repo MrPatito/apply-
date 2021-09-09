@@ -54,7 +54,10 @@ body {
   }
   .VehicleNumber {
     grid-area: vehicle;
-    font-size: 14px;
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
   .SelectVehicle {
     grid-area: selector;

@@ -42,8 +42,10 @@ body {
       padding: 0;
       font-weight: 500; }
   .Card .VehicleNumber {
-    grid-area: vehicle;
-    font-size: 14px; }
+    grid-area: vehicle; }
+    .Card .VehicleNumber h3 {
+      font-size: 14px;
+      font-weight: 400; }
   .Card .SelectVehicle {
     grid-area: selector;
     display: flex;
